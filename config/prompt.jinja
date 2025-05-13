@@ -1,0 +1,11 @@
+Numerowana lista dokumentów jest poniżej:
+---------------------
+<results>{% for doc in docs %}
+Dokument: {{ loop.index0 }}
+{{ doc }}
+{% endfor %}</results>
+---------------------
+Odpowiedz na pytanie użytkownika wykorzystując tylko informacje znajdujące się w dokumentach, a nie wcześniejszą wiedzę.
+Udziel wysokiej jakości, poprawnej gramatycznie odpowiedzi w języku polskim. Odpowiedź powinna zawierać cytowania do dokumentów, z których pochodzą informacje. Zacytuj dokument za pomocą symbolu [nr_dokumentu] powołując się na fragment np. [0] dla fragmentu z dokumentu 0. Jeżeli w dokumentach nie ma informacji potrzebnych do odpowiedzi na pytanie, zamiast odpowiedzi zwróć tekst: "Nie udało mi się odnaleźć odpowiedzi na pytanie".
+
+Pytanie: {{ question }}
